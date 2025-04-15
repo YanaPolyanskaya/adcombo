@@ -1,0 +1,493 @@
+/* размеры могут чуть не соответствовать макету в figma,
+я подганяла их по perfect pixel */
+@font-face {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/Ubuntu-B.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Ubuntu-M.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 100;
+    src: url("fonts/Ubuntu-L.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 500;
+    src: url("fonts/Ubuntu-M.woff") format("woff");
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    width: 1920px;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 33px 375px;
+    gap: 30px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(0, 0);
+}
+
+.wrapper_left {
+    position: absolute;
+    background-image: url("images/left-balls.png");
+    width: 532px;
+    height: 634px;
+    top: 240px;
+    left: 30px;
+}
+
+.wrapper_right {
+    position: absolute;
+    background-image: url("images/right-balls.png");
+    width: 600px;
+    height: 634px;
+    left: 1314px;
+    top: 165px;
+}
+
+.header {
+    background: #9564AA;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    height: 100px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 310px;
+    margin: 10px 0 0;
+}
+
+.header_logo {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.header_navigation {
+    display: flex;
+}
+
+.header_navigation_list {
+    display: flex;
+    list-style-type: none;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navigation_list-item {
+    color: #ffffff;
+}
+
+.navigation_list-button {
+    background: #684677;
+    color: #FFCF2D;
+    font-weight: 700;
+    padding: 5px 13px;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+}
+
+.navigation_list-button::after {
+    content: "";
+    display: inline-block;
+    height: 1.4rem;
+    width: 1.4rem;
+    margin-left: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-image: url(images/diamond-bold.png)
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 23.5%;
+    height: 810px;
+    background: #9564AA1A;
+    border: 2px solid #9564AA33;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.sidebar_user {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    position: relative;
+}
+
+.sidebar_user::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: -4px;
+    height: 2px;
+    background-color: #9564AA33;
+}
+
+.sidebar_user_img {
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar_user_info {
+    display: grid;
+    align-items: center;
+}
+
+.sidebar_button {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-size: 0.584rem;
+    border-radius: 0.3rem;
+    background: #684677;
+    border: none;
+}
+
+.sidebar_list {
+    padding: 29px 29px;
+    list-style: none;
+    display: grid;
+    gap: 22px;
+}
+
+.sidebar_item-link {
+    color: #000000;
+}
+
+.sidebar_item::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 29px;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.sidebar_item-profile::before {
+    background-image: url('images/profile.png');
+}
+
+.sidebar_item-myphotos::before {
+    background-image: url('images/my-photos.png');
+}
+
+.sidebar_item-messages::before {
+    background-image: url('images/messages.png');
+}
+
+.sidebar_item-favorites::before {
+    background-image: url('images/favorites.png');
+}
+
+.sidebar_item-guests::before {
+    background-image: url('images/guests.png');
+}
+
+.sidebar_item-settings::before {
+    background-image: url('images/settings.png');
+}
+
+.sidebar_item-logout::before {
+    background-image: url('images/log-out.png');
+}
+
+.container {
+    width: 75%;
+}
+
+.container_content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.container h1 {
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 2.5rem;
+    line-height: 67%;
+}
+
+.container_discount {
+    position: relative;
+    display: flex;
+    background: #C15CA1;
+    border-radius: 10px;
+    height: 82px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.container_discount::before {
+    content: "";
+    position: absolute;
+    top: -32px;
+    left: 0;
+    right: 0;
+    border: 1px solid #68467720;
+}
+
+.discount {
+    font-size: 42px;
+    font-weight: 700;
+    color: #FFCF2D;
+    text-shadow:
+        -1px -1px 0 #FFFFFF,
+        1px -1px 0 #FFFFFF,
+        -1px 1px 0 #FFFFFF,
+        1px 1px 0 #FFFFFF;
+}
+
+.container_discount p {
+    color: #FFFFFF;
+    font-size: 17px;
+}
+
+.timer {
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-size: 2.52rem;
+    padding: 5px 23px;
+    font-weight: 100;
+}
+
+.container_card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 38px;
+}
+
+.card {
+    position: relative;
+    margin-top: -13px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #9564AA;
+    border-radius: 10px;
+    background: #9564AA1A;
+    flex: 1 1;
+    justify-content: center;
+    padding: 12px;
+    gap: 15px;
+}
+
+.card:hover {
+    background: #9564AA;
+    color: #ffffff;
+}
+
+.card:hover>button {
+    background: #FFCF2D;
+    color: #000000;
+}
+
+.card:hover::before {
+    background: #FFCF2D;
+    position: absolute;
+    top: -11px;
+    left: 13px;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    content: "One time offer!";
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.card_price {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_price::after {
+    content: "CR";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background: #FFCF2D;
+    color: black;
+    font-size: 8px;
+
+}
+
+.card_button {
+    padding: 17px 29px;
+    background: #FFFFFF;
+    color: #bdbdbd;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+}
+
+.container_accept_privacy {
+    margin-top: 10px;
+}
+
+.checkbox_label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.checkbox_label input {
+    display: none;
+}
+
+.checkbox_custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #9564AA;
+    border-radius: 5px;
+}
+
+.checkbox_custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 10px;
+    border: 2px solid white;
+    border-width: 0 3px 3px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+.checkbox_label input:checked+.checkbox_custom:after {
+    display: block;
+}
+
+.checkbox_label:hover input+.checkbox_custom {
+    background-color: #684677;
+}
+
+.checkbox_label input:active~.checkbox_custom {
+    background-color: #684677;
+}
+
+.checkbox_label input:focus~.checkbox-custom {
+    box-shadow: 0 0 0 2px #68467780;
+}
+
+.container_diamond_environment {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    margin: 50px 200px;
+}
+
+.center-image {
+    position: absolute;
+    transform: translate(115%, 93%);
+    z-index: 1;
+}
+
+.environment_item {
+    position: absolute;
+    width: 0;
+    height: auto;
+    text-align: center;
+    justify-items: center;
+    line-height: 0.8;
+}
+
+.environment_item span {
+    font-size: 12px;
+}
+
+.environment_item_img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #9564AA1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.environment_item_img:hover {
+    background: #FFCF2D;
+}
