@@ -343,7 +343,6 @@ input[type="radio"] {
     justify-content: center;
     padding: 12px;
     gap: 15px;
-    pointer-events: none;
 }
 
 .card:hover {
@@ -485,6 +484,9 @@ input[type="radio"] {
     top: 31%; 
     left: 42%;
     z-index: 1;
+    /* width: 130px; */
+    width: calc(4.375rem + 3.125vw);
+    height: auto;
 }
 
 .environment_item {
@@ -497,13 +499,16 @@ input[type="radio"] {
 }
 
 .environment_item span {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: calc(0.6rem + 0.125vw);
 }
 
 .environment_item_img {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    /* width: 50px; */
+    width: calc(1.625rem + 1.25vw);
+    /* height: 50px; */
+    height: calc(1.625rem + 1.25vw);
     background: #9564AA1A;
     display: flex;
     justify-content: center;
