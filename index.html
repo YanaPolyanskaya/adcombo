@@ -17,9 +17,9 @@
         <a href="/" class="header_logo">Logo</a>
         <nav class="header_navigation">
             <ul class="header_navigation_list">
-                <li><a href="#" class="navigation_list-item">People nearby</a></li>
-                <li><a href="#" class="navigation_list-item">Search</a></li>
-                <li><a href="#" class="navigation_list-button">Premium</a></li>
+                <li><a href="#" class="navigation_list_item">People nearby</a></li>
+                <li><a href="#" class="navigation_list_item">Search</a></li>
+                <li><a href="#" class="navigation_list_button">Premium</a></li>
             </ul>
         </nav>
     </header>
@@ -27,6 +27,7 @@
     <main class="main">
         <div class="wrapper wrapper_left"></div>
         <div class="wrapper wrapper_right"></div>
+
         <section class="sidebar">
             <div class="sidebar_user">
                 <img class="sidebar_user_img" src="images/men.png" alt="user">
@@ -36,16 +37,16 @@
                 </div>
             </div>
             <ul class="sidebar_list">
-                <li class="sidebar_item sidebar_item-profile"><a href="#" class="sidebar_item-link">Profile</a>
+                <li class="sidebar_item sidebar_item-profile"><a href="#" class="sidebar_item_link">Profile</a>
                 </li>
-                <li class="sidebar_item sidebar_item-myphotos"><a href="#" class="sidebar_item-link">My
+                <li class="sidebar_item sidebar_item-myphotos"><a href="#" class="sidebar_item_link">My
                         photos</a></li>
-                <li class="sidebar_item sidebar_item-messages"><a href="#" class="sidebar_item-link">Messages</a></li>
-                <li class="sidebar_item sidebar_item-favorites"><a href="#" class="sidebar_item-link">Favorites</a></li>
-                <li class="sidebar_item sidebar_item-guests"><a href="#" class="sidebar_item-link">Guests</a>
+                <li class="sidebar_item sidebar_item-messages"><a href="#" class="sidebar_item_link">Messages</a></li>
+                <li class="sidebar_item sidebar_item-favorites"><a href="#" class="sidebar_item_link">Favorites</a></li>
+                <li class="sidebar_item sidebar_item-guests"><a href="#" class="sidebar_item_link">Guests</a>
                 </li>
-                <li class="sidebar_item sidebar_item-settings"><a href="#" class="sidebar_item-link">Settings</a></li>
-                <li class="sidebar_item sidebar_item-logout"><a href="#" class="sidebar_item-link">Log out</a>
+                <li class="sidebar_item sidebar_item-settings"><a href="#" class="sidebar_item_link">Settings</a></li>
+                <li class="sidebar_item sidebar_item-logout"><a href="#" class="sidebar_item_link">Log out</a>
                 </li>
             </ul>
         </section>
@@ -59,69 +60,87 @@
                     <div class="timer">00:10:00</div>
                 </div>
 
-                <div class="container_card">
-                    <div class="card">
-                        <span class="card_price">50</span>
-                        <button class="card_button" type="button">Buy&nbsp;now</button>
+                <div class="slider">
+                    <div class="slides container_card">
+                        <div class="slide card">
+                            <span class="card_price">50</span>
+                            <button class="card_button" type="button">Buy&nbsp;now</button>
+                        </div>
+                        <div class="slide card">
+                            <span class="card_price">150</span>
+                            <button class="card_button" type="button">Buy&nbsp;now</button>
+                        </div>
+                        <div class="slide card">
+                            <span class="card_price">300</span>
+                            <button class="card_button" type="button">Buy&nbsp;now</button>
+                        </div>
+                        <div class="slide card">
+                            <span class="card_price">500</span>
+                            <button class="card_button" type="button">Buy&nbsp;now</button>
+                        </div>
+                        <div class="slide card">
+                            <span class="card_price">1000</span>
+                            <button class="card_button" type="button">Buy&nbsp;now</button>
+                        </div>
+                        <div class="slide card">
+                            <span class="card_price">1000</span>
+                            <button class="card_button" type="button">Buy&nbsp;now</button>
+                        </div>
                     </div>
-                    <div class="card">
-                        <span class="card_price">150</span>
-                        <button class="card_button" type="button">Buy&nbsp;now</button>
-                    </div>
-                    <div class="card">
-                        <span class="card_price">300</span>
-                        <button class="card_button" type="button">Buy&nbsp;now</button>
-                    </div>
-                    <div class="card">
-                        <span class="card_price">500</span>
-                        <button class="card_button" type="button">Buy&nbsp;now</button>
-                    </div>
-                    <div class="card">
-                        <span class="card_price">1000</span>
-                        <button class="card_button" type="button">Buy&nbsp;now</button>
-                    </div>
-                    <div class="card">
-                        <span class="card_price">1000</span>
-                        <button class="card_button" type="button">Buy&nbsp;now</button>
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <input type="radio" name="slider" id="slide5">
+                    <input type="radio" name="slider" id="slide6">
+                    <div class="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                        <label for="slide5"></label>
+                        <label for="slide6"></label>
                     </div>
                 </div>
+
+                <button class="card_button_mobile" type="button">Try now</button>
             </div>
 
             <div class="container_accept_privacy">
                 <label class="checkbox_label">
                     <input type="checkbox" id="accept_privacy">
                     <span class="checkbox_custom"></span>
-                    By clicking Checkbox you agree and accept our
-                    <a href="#">Privacy Policy</a>, and
-                    <a href="#">Terms of use</a>
+                    <p>By clicking Checkbox you agree and accept our
+                        <a href="#">Privacy Policy</a>, and
+                        <a href="#">Terms of use</a>
+                    </p>
                 </label>
             </div>
 
             <div class="container_diamond_environment">
                 <img class="center-image" src="images/diamond.png" alt="diamond">
-
-                <div class="environment_item item_right" data-index="0">
+                <div class="environment_item" data-index="0">
                     <div class="environment_item_img">
                         <img src="images/guests.png" alt="guests">
                     </div>
                     <span>Просматривать скрытые фото</span>
                 </div>
 
-                <div class="environment_item item_right" data-index="1">
+                <div class="environment_item" data-index="1">
                     <div class="environment_item_img">
                         <img src="images/settings.png" alt="settings">
                     </div>
                     <span>Просматривать скрытые фото</span>
                 </div>
 
-                <div class="environment_item item_left" data-index="2">
+                <div class="environment_item" data-index="2">
                     <div class="environment_item_img">
                         <img src="images/messages.png" alt="messages">
                     </div>
                     <span>Просматривать скрытые фото</span>
                 </div>
 
-                <div class="environment_item item_left" data-index="3">
+                <div class="environment_item" data-index="3">
                     <div class="environment_item_img">
                         <img src="images/present.png" alt="present">
                     </div>
@@ -129,21 +148,21 @@
                 </div>
 
                 <div class="environment_item" data-index="4">
-                    <div class="environment_item_img item_left">
+                    <div class="environment_item_img">
                         <img src="images/send-messages.png" alt="send-messages">
                     </div>
                     <span>Отправлять сообщения</span>
                 </div>
 
                 <div class="environment_item" data-index="5">
-                    <div class="environment_item_img item_right">
+                    <div class="environment_item_img">
                         <img src="images/favorites.png" alt="favorites">
                     </div>
                     <span>Пользоваться другими&nbsp;премиум функциями</span>
                 </div>
+
             </div>
         </section>
-        
     </main>
     <script src="index.js"></script>
 </body>
